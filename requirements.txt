@@ -1,4 +1,3 @@
 flask
 owlready2
 rdflib
-gurnicorn
