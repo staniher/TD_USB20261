@@ -1,0 +1,440 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27/"
+     xml:base="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:untitled-ontology-27="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27">
+        <owl:versionIRI rdf:resource="http://usb-bunia.org/ontologies/diagnostic_informatique_swrl.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#a_diagnostic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#a_diagnostic">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Ordinateur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Diagnostic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#a_solution -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#a_solution">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Ordinateur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Solution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#a_symptome -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#a_symptome">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Ordinateur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Symptome"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#corrige_par -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#corrige_par">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Diagnostic"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Solution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#suggere -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#suggere">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Symptome"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Diagnostic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#a_etat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#a_etat">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Ordinateur"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#a_marque -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#a_marque">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Ordinateur"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#a_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#a_type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Ordinateur"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Diagnostic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Diagnostic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Ordinateur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Ordinateur"/>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Solution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Solution"/>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Symptome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Symptome"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#PC_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#PC_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Ordinateur"/>
+        <untitled-ontology-27:a_symptome rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#bips"/>
+        <untitled-ontology-27:a_symptome rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#ecran_noir"/>
+        <untitled-ontology-27:a_etat>En_panne</untitled-ontology-27:a_etat>
+        <untitled-ontology-27:a_marque>HP</untitled-ontology-27:a_marque>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#PC_002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#PC_002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Ordinateur"/>
+        <untitled-ontology-27:a_symptome rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#chauffe"/>
+        <untitled-ontology-27:a_etat>Surchauffe</untitled-ontology-27:a_etat>
+        <untitled-ontology-27:a_marque>Dell</untitled-ontology-27:a_marque>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#PC_003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#PC_003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Ordinateur"/>
+        <untitled-ontology-27:a_symptome rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#ne_sallume_pas"/>
+        <untitled-ontology-27:a_etat>Ne_demarre_pas</untitled-ontology-27:a_etat>
+        <untitled-ontology-27:a_marque>Lenovo</untitled-ontology-27:a_marque>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#bips -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#bips">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Symptome"/>
+        <untitled-ontology-27:suggere rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#panne_ram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#changer_chargeur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#changer_chargeur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Solution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#chauffe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#chauffe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Symptome"/>
+        <untitled-ontology-27:suggere rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#surchauffe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#ecran_noir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#ecran_noir">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Symptome"/>
+        <untitled-ontology-27:suggere rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#panne_ram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#ne_sallume_pas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#ne_sallume_pas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Symptome"/>
+        <untitled-ontology-27:suggere rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#panne_alimentation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#nettoyer_ventilateur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#nettoyer_ventilateur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Solution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#panne_alimentation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#panne_alimentation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Diagnostic"/>
+        <untitled-ontology-27:corrige_par rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#changer_chargeur"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#panne_ram -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#panne_ram">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Diagnostic"/>
+        <untitled-ontology-27:corrige_par rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#remplacer_ram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#remplacer_ram -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#remplacer_ram">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Solution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#surchauffe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#surchauffe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Diagnostic"/>
+        <untitled-ontology-27:corrige_par rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#nettoyer_ventilateur"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27/o">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27/d">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27/sol">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27/s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Cette regle propose des solutions au diagnostiques</rdfs:comment>
+        <rdfs:label>R2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Ordinateur"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27/o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#a_diagnostic"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27/o"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27/d"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#corrige_par"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27/d"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27/sol"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#a_solution"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27/o"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27/sol"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Cette regle permet de diagnostiquer les PC</rdfs:comment>
+        <rdfs:label>R1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#Ordinateur"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27/o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#a_symptome"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27/o"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27/s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#suggere"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27/s"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27/d"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27#a_diagnostic"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27/o"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/victus/ontologies/2026/3/untitled-ontology-27/d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

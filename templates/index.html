@@ -1,0 +1,113 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diagnostic informatique à partir du RDF</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Diagnostic informatique basé sur ton fichier RDF</h1>
+      <p class="muted">
+        Cette application lit directement <code>{{ onto_filename }}</code>.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Lancer un diagnostic</h2>
+      <form method="post">
+        <p>
+          <label><input type="radio" name="mode" value="personnalise" {% if mode != 'pc_existant' %}checked{% endif %}> Cas personnalisé</label>
+          &nbsp;&nbsp;
+          <label><input type="radio" name="mode" value="pc_existant" {% if mode == 'pc_existant' %}checked{% endif %}> Ordinateur déjà présent dans le RDF</label>
+        </p>
+
+        <div class="row">
+          <div>
+            <h3>Mode personnalisé</h3>
+            <label for="nom_pc">Nom du PC</label>
+            <input type="text" id="nom_pc" name="nom_pc" value="{{ nom_pc }}" placeholder="Ex. PC_TP_BAC3">
+            <p class="muted">Choisis les symptômes ci-dessous.</p>
+            <div class="symptoms">
+              {% for item in symptoms %}
+                <label class="box">
+                  <input type="checkbox" name="symptomes" value="{{ item.name }}" {% if item.name in selected %}checked{% endif %}>
+                  {{ item.pretty }}
+                </label>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div>
+            <h3>Mode PC existant</h3>
+            <label for="pc_name">Ordinateur</label>
+            <select id="pc_name" name="pc_name">
+              <option value="">-- Sélectionner --</option>
+              {% for pc in computers %}
+                <option value="{{ pc.name }}" {% if pc.name == selected_pc %}selected{% endif %}>{{ pc.pretty }}</option>
+              {% endfor %}
+            </select>
+            <p class="muted">Les symptômes seront récupérés automatiquement depuis le RDF.</p>
+          </div>
+        </div>
+
+        <p style="margin-top: 18px;"><button type="submit">Diagnostiquer</button></p>
+      </form>
+    </div>
+
+    {% if result %}
+    <div class="card">
+      <h2>Résultat</h2>
+      <p><strong>Nom du PC :</strong> {{ result.nom_pc }}</p>
+      <p><strong>Moteur :</strong> {{ result.engine }}</p>
+
+      {% if result.error %}
+        <div class="error">{{ result.error }}</div>
+      {% else %}
+        <div class="ok">Diagnostic calculé avec succès.</div>
+      {% endif %}
+
+      <h3>Symptômes</h3>
+      <div class="chips">
+        {% for item in result.symptomes_pretty %}
+          <span class="chip">{{ item }}</span>
+        {% else %}
+          <span class="muted">Aucun symptôme.</span>
+        {% endfor %}
+      </div>
+
+      <h3>Diagnostics</h3>
+      <div class="chips">
+        {% for item in result.diagnostics_pretty %}
+          <span class="chip">{{ item }}</span>
+        {% else %}
+          <span class="muted">Aucun diagnostic trouvé.</span>
+        {% endfor %}
+      </div>
+
+      <h3>Solutions</h3>
+      <div class="chips">
+        {% for item in result.solutions_pretty %}
+          <span class="chip">{{ item }}</span>
+        {% else %}
+          <span class="muted">Aucune solution trouvée.</span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="card">
+      <h2>API</h2>
+      <p class="muted">POST JSON sur <code>/api/diagnostiquer</code></p>
+      <pre>{"nom_pc": "PC_API", "symptomes": ["ecran_noir", "bips"]}</pre>
+      <p>
+        <a href="/api">Aide API</a> ·
+        <a href="/ontology">Télécharger le RDF</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
